@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Milwaukee Running Club</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@600&display=swap" rel="stylesheet">
+
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background-color: #f5f7f5;
+            color: #333;
+        }
+
+        .container {
+            width: 90%;
+            margin: auto;
+        }
+
+        /* Header and navigation */
+        header {
+            background-color: #2f664c;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+
+        nav ul {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            list-style: none;
+            padding: 0;
+            gap: 15px;
+        }
+
+        nav a {
+            display: inline-block;
+            padding: 5px;
+            text-decoration: none;
+        }
+
+        /* The five hyperlink states */
+        nav a:link { color: white; }
+        nav a:visited { color: #e5e5e5; }
+        nav a:hover { color: yellow; }
+        nav a:focus { outline: 2px solid yellow; }
+        nav a:active { color: orange; }
+
+        #about {
+            text-align: center;
+            padding: 15px;
+        }
+
+        /* Three columns using Flexbox */
+        #main {
+            display: flex;
+            flex-direction: row;
+            margin: 20px 0;
+        }
+
+        .column1, .column2, .column3 {
+            flex: 1;
+            min-width: 0;
+            padding: 15px;
+            border-right: 1px solid gray;
+        }
+
+        /* Change the original column order */
+        .column1 { order: 3; border-right: none; }
+        .column2 { order: 2; }
+        .column3 { order: 1; }
+
+        h2 {
+            font-family: "Roboto Slab", serif;
+            color: #2f664c;
+            text-align: center;
+        }
+
+        #main img {
+            width: 100%;
+            max-width: 100%;
+            height: auto;
+        }
+
+        #main p {
+            line-height: 1.6;
+        }
+
+        /* Footer using Flexbox */
+        footer {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 20px;
+            background-color: #dcebdd;
+            padding: 20px;
+        }
+
+        .footer-box {
+            flex: 1;
+            min-width: 160px;
+        }
+
+        .footer-box a {
+            overflow-wrap: anywhere;
+        }
+
+        .social img {
+            width: 30px;
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        /* Screens smaller than 1000px */
+        @media screen and (max-width: 999px) {
+            .container { width: 100%; }
+        }
+
+        /* Screens smaller than 700px */
+        @media screen and (max-width: 699px) {
+            #main {
+                flex-direction: column;
+            }
+
+            .column1, .column2, .column3 {
+                border: none;
+                padding: 0;
+                margin: 10px 15px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+    <header>
+        <h1 id="title">Milwaukee Running Club</h1>
+        <nav>
+            <ul>
+                <li><a href="#newsletter">Newsletter</a></li>
+                <li><a href="#about">About Us</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li><a href="#locations">Locations</a></li>
+                <li><a href="#main">Site Index</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div id="about">
+        <p>Welcome to the Milwaukee Running Club! Learn about local runners, races, and training tips.</p>
+    </div>
+
+    <section id="main">
+        <div class="column1">
+            <h2>Training Tips</h2>
+            <img src="https://images.unsplash.com/photo-1509833903111-9cb142f644e4?w=700" alt="Person exercising during training">
+            <p>Running is a great way to stay healthy and active. Before running, make sure to warm up so your body is ready to exercise. Start with a comfortable pace.</p>
+            <p>Remember to drink water and take breaks when needed. If you are new to running, begin with short distances. You can slowly increase how far you run each week.</p>
+        </div>
+
+        <div class="column2">
+            <h2>Upcoming Races</h2>
+            <img src="https://images.unsplash.com/photo-1552674605-db6ffd4facb5?w=700" alt="Runners taking part in a race">
+            <p>Milwaukee has different running events throughout the year. Some races are short, like a 5K, while others are longer. People with different experience levels can participate.</p>
+            <p>Joining a race is a fun way to meet other runners. It can also help you set a goal for your training. Check local event websites for race dates and registration details.</p>
+        </div>
+
+        <div class="column3">
+            <h2>Featured Runner</h2>
+            <img src="https://images.unsplash.com/photo-1483721310020-03333e577078?w=700" alt="Runner exercising outdoors">
+            <p>Our featured runner is Alex, who enjoys running around Milwaukee. Alex started with short runs around the neighborhood. Over time, running became part of a weekly routine.</p>
+            <p>Alex likes running with friends because it makes exercise more enjoyable. The goal is to keep improving little by little. Staying consistent has made a big difference.</p>
+        </div>
+    </section>
+
+    <footer id="contact">
+        <div class="footer-box" id="newsletter">
+            <h3>Follow Us</h3>
+            <div class="social">
+                <a href="https://www.facebook.com/" aria-label="Facebook">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/facebook.svg" alt="Facebook icon">
+                </a>
+                <a href="https://www.instagram.com/" aria-label="Instagram">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/instagram.svg" alt="Instagram icon">
+                </a>
+                <a href="https://www.linkedin.com/" aria-label="LinkedIn">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v15/icons/linkedin.svg" alt="LinkedIn icon">
+                </a>
+            </div>
+        </div>
+
+        <div class="footer-box" id="locations">
+            <h3>Address</h3>
+            <p>100 Example Street<br>Milwaukee, WI 53202</p>
+        </div>
+
+        <div class="footer-box">
+            <h3>Contact</h3>
+            <p>Email: <a href="mailto:hello@milwaukeerunningclub.example">hello@milwaukeerunningclub.example</a></p>
+            <p>Phone: (414) 555-0142</p>
+            <small>Sample contact information for a class assignment.</small>
+        </div>
+    </footer>
+</div>
+</body>
+</html>
